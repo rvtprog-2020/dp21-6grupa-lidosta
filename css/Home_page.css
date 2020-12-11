@@ -94,6 +94,13 @@ body {
     font-size: 60px;
     color: black;
   }
+  .LidostasText{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 80px;
+    font-size: 60px;
+    color: black;
+  }
   .ReisiText{
     position: absolute;
     margin-top: 100px;
@@ -112,7 +119,7 @@ body {
   }
   .AdminNavi{
     position: absolute;
-    margin-left: 920px;
+    margin-left: 910px;
   }
   .Homepage{
     Position: absolute;

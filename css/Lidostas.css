@@ -89,39 +89,39 @@ body {
   .LidostaRiga{
       position: absolute;
       margin-left: 130px;
-      margin-top: 150px;
+      margin-top: 160px;
   }
   .LidostaSpilve{
     position: absolute;
     margin-left: 115px;
-    margin-top: 190px;
+    margin-top: 210px;
   }
   .LidostaTukums{
     position: absolute;
     margin-left: 115px;
-    margin-top: 230px;
+    margin-top: 260px;
   }
   .LidostaLiepaja{
     position: absolute;
     margin-left: 115px;
-    margin-top: 270px;
+    margin-top: 310px;
   }
   .LidostaVentspils{
     position: absolute;
     margin-left: 115px;
-    margin-top: 310px;
+    margin-top: 360px;
 
   }
   .LidostaFBO{
     position: absolute;
     margin-left: 170px;
-    margin-top: 350px;
+    margin-top: 410px;
 
   }
   .LidostaCapital{
     position: absolute;
     margin-left: 80px;
-    margin-top: 390px;
+    margin-top: 460px;
 
   }
   .HomeLidostas{
