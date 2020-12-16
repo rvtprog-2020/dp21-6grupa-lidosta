@@ -77,7 +77,7 @@ body {
   }
   .AdminNavi{
     position: absolute;
-    margin-left: 1140px;
+    margin-left: 900px;
   }
   .LidostasLV{
       position: absolute;
@@ -126,7 +126,7 @@ body {
   }
   .HomeLidostas{
     Position: absolute;
-    margin-left: 665px;
+    margin-left: 600px;
     margin-top: 4px;
     font-size: 40px;
     color: rgba(46, 0, 250, 0.3)
@@ -134,46 +134,46 @@ body {
 
 .LidostasEU{
   position: absolute;
-  margin-left: 915px;
+  margin-left: 805px;
   margin-top: 80px;
   font-size: 45px;
 }
 
 .LidostaTa{
   position: absolute;
-  margin-left: 900px;
+  margin-left: 800px;
   margin-top: 160px;
 }
 .LidostaVi{
 position: absolute;
-margin-left: 930px;
+margin-left: 830px;
 margin-top: 210px;
 }
 .LidostaGa{
 position: absolute;
-margin-left: 990px;
+margin-left: 900px;
 margin-top: 260px;
 }
 .LidostaSh{
 position: absolute;
-margin-left: 1090px;
+margin-left: 1000px;
 margin-top: 310px;
 }
 .LidostaGo{
 position: absolute;
-margin-left: 975px;
+margin-left: 880px;
 margin-top: 360px;
 
 }
 .LidostaFr{
 position: absolute;
-margin-left: 900px;
+margin-left: 800px;
 margin-top: 410px;
 
 }
 .LidostaHe{
 position: absolute;
-margin-left: 980px;
+margin-left: 880px;
 margin-top: 460px;
 
 }

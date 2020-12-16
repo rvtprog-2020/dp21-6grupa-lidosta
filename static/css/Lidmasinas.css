@@ -77,70 +77,70 @@ body {
   }
   .AdminNavi{
     position: absolute;
-    margin-left: 1120px;
+    margin-left: 900px;
   }
   .HomeLidmasinas{
     Position: absolute;
-    margin-left: 665px;
+    margin-left: 580px;
     margin-top: 4px;
     font-size: 40px;
     color: rgba(46, 0, 250, 0.3)
 }
   .airbus320{
-    width: 900px;
-    height: 565px;
+    width: 700px;
+    height: 465px;
   }
   .Airbus320Text1{
     position: absolute;
-    margin-left: 910px;
+    margin-left: 710px;
     margin-top: 70px;
   }
   .Airbus320Text2{
     position: absolute;
-    margin-left: 910px;
+    margin-left: 710px;
     margin-top: 130px;
   }
   .Airbus320Text3{
     position: absolute;
-    margin-left: 910px;
+    margin-left: 710px;
     margin-top: 170px;
   }
   .Airbus320Text4{
     position: absolute;
-    margin-left: 910px;
+    margin-left: 710px;
     margin-top: 210px;
   }
   .Airbus320Text5{
     position: absolute;
-    margin-left: 910px;
+    margin-left: 710px;
     margin-top: 250px;
   }
   .boeing737{
-    width: 900px;
-    height: 565px;
+    width: 700px;
+    height: 465px;
   }
   .Boeing737Text1{
     position: absolute;
-    margin-left: 910px;
+    margin-left: 710px;
     margin-top: 70px;
   }
   .Boeing737Text2{
     position: absolute;
-    margin-left: 910px;
+    margin-left: 710px;
     margin-top: 130px;
   }
   .Boeing737Text3{
     position: absolute;
-    margin-left: 910px;
+    margin-left: 710px;
     margin-top: 170px;
   }
   .Boeing737Text4{
     position: absolute;
-    margin-left: 910px;
+    margin-left: 710px;
     margin-top: 210px;
   }
   .Boeing737Text5{
     position: absolute;
-    margin-left: 910px;
+    margin-left: 710px;
     margin-top: 290px;
   }
