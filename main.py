@@ -1,6 +1,15 @@
 from flask import Flask, render_template, request
+from pymongo import MongoClient
+from bson.json_util import dumps
+
+client = MongoClient("mongodb+srv://admin:<admin>@cluster0.gi8gq.mongodb.net/<lidostaBRUV>?retryWrites=true&w=majority")
 
 app = Flask(__name__)
+
+#  Datubaze bruv
+db=client.lidostaBRUV
+
+
 
 @app.route('/home')
 def home():
