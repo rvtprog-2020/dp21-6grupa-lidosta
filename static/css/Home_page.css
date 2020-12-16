@@ -76,15 +76,15 @@ body {
     }
   }
   .Lidostas{
-    width: 516px;
+    width: 446px;
     height: 725px;
   }
   .Reisi{
-    width: 516px;
+    width: 446px;
     height: 725px;
 }
   .Lidmasinas{
-    width: 516px;
+    width: 446px;
     height: 725px;
   }
   h1{
@@ -97,14 +97,14 @@ body {
   .LidostasText{
     position: absolute;
     margin-top: 100px;
-    margin-left: 140px;
+    margin-left: 120px;
     font-size: 60px;
     color: black;
   }
   .ReisiText{
     position: absolute;
     margin-top: 100px;
-    margin-left: 710px;
+    margin-left: 600px;
     font-size: 60px;
     color: black;
 
@@ -112,18 +112,18 @@ body {
   .LidmasinasText{
     position: absolute;
     margin-top: 100px;
-    margin-left: 1150px;
+    margin-left: 1000px;
     font-size: 60px;
     color: black;
 
   }
   .AdminNavi{
     position: absolute;
-    margin-left: 1140px;
+    margin-left: 900px;
   }
   .Homepage{
     Position: absolute;
-    margin-left: 715px;
+    margin-left: 620px;
     margin-top: 4px;
     font-size: 40px;
     color: rgba(46, 0, 250, 0.3)
