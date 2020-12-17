@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 from pymongo import MongoClient
 from bson.json_util import dumps
+
 
 client = MongoClient("mongodb+srv://admin:admin@cluster0.gi8gq.mongodb.net/myproject?retryWrites=true&w=majority")
 
@@ -20,7 +21,7 @@ user2 = {"id":"2", "vards":"Maikls","uzvards":"Beginskis"}
 
 users_db.insert_one(user1)
 users_db.insert_one(user2)
-exit()
+
 
 
 
@@ -43,5 +44,19 @@ def reisi():
 @app.route('/admin')
 def admin():
     return render_template('admin.html')
+
+    @app.route("/login", methods=["GET","POST"])
+def login():
+    if "name" in session and "password" in session:
+        if session["name"] == "admin" and session["password"] == "admin":
+            return redirect(url_for("panel"))
+    if request.method == "POST":
+        name = request.form["name"]
+        password = request.form["password"]
+        session["name"] = name
+        session["password"] = password
+        return redirect(url_for("panel"))
+    else:
+        return render_template("login.html")
 
 app.run(host='0.0.0.0', port=80, debug=True)
