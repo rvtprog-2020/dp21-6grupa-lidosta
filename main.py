@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, redirect, url_for
 from pymongo import MongoClient
 from bson.json_util import dumps
 
@@ -23,8 +23,6 @@ users_db.insert_one(user1)
 users_db.insert_one(user2)
 
 
-
-
 @app.route('/home')
 def home():
     return render_template('Home_page.html')
@@ -45,7 +43,7 @@ def reisi():
 def admin():
     return render_template('admin.html')
 
-    @app.route("/login", methods=["GET","POST"])
+@app.route("/login", methods=["GET","POST"])
 def login():
     if "name" in session and "password" in session:
         if session["name"] == "admin" and session["password"] == "admin":
