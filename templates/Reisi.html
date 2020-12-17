@@ -14,15 +14,21 @@
         <a href="/lidostas" class="LidostasNavi">Lidostas</a>
         <a href="/lidmasinas" class="LidmasinasNavi">Lidmašīnas</a>
         <h1 class="HomeReisi"><strong>Reisi</strong></h1>
-        <a class="AdminNavi">Admin Login</a>
+        {% if not session.auth%}
         <div class="login-container">
-          <form action="/action_page.php">
-            <input type="text" placeholder="Username" name="username">
-            <input type="text" placeholder="Password" name="psw">
+          <form action="" method="POST">
+            <input type="text" placeholder="email" name="email">
+            <input type="password" placeholder="Password" name="password">
             <button type="submit">Login</button>
-          </form>
+          </form>  
         </div>
-      </div>
+        {% endif %}
+        {% if session.auth%}
+        <a href="/logout">
+          <button class="Logout" type="submit">Izlogoties</button>
+          </a>
+        {% endif %}
+            </div>
 
       <table class="table table-striped">
         <thead>

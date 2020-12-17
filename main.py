@@ -1,47 +1,91 @@
 from flask import Flask, render_template, request, session, redirect, url_for
 from pymongo import MongoClient
 from bson.json_util import dumps
+from random import randint
 
 
-client = MongoClient("mongodb+srv://admin:admin@cluster0.gi8gq.mongodb.net/myproject?retryWrites=true&w=majority")
-
+client = MongoClient("mongodb+srv://KileCodora:06907328D@cluster0.jzqkx.mongodb.net/myproject?retryWrites=true&w=majority")
 app = Flask(__name__)
 
-# Datubazes
-db = client.myproject
+app.secret_key = "hkIbg#45f1"
 
-
-# Tabulas/Dokumenti
+db = client.users
 users_db = db.users
-preces_db = db.preces
 
-#  Datubaze bruv
-user1 = {"id":"1", "vards":"Gusts","uzvards":"Stanga"}
-user2 = {"id":"2", "vards":"Maikls","uzvards":"Beginskis"}
-
-users_db.insert_one(user1)
-users_db.insert_one(user2)
+db = client.data
+data_db = db.data
 
 
-@app.route('/home')
+@app.route('/home', methods=["GET","POST"])
 def home():
-    return render_template('Home_page.html')
+    if "auth" in session:
+        return render_template("Home_page.html")
+    else:
+        if request.method == 'POST':
+            email = request.form['email']
+            password = request.form['password']
 
-@app.route('/lidostas')
+            a = users_db.find_one({"email":email})
+            b = users_db.find_one({"email":email},{"password":password})
+
+            if a != None or b != None:
+                a = a['email']
+                b = b['password']
+
+            if a != email or b != password:
+                return redirect(url_for("home"))
+
+            session["auth"] = email
+
+            return redirect(url_for("home"))
+
+        else:
+            return render_template("Home_page.html")
+@app.route('/lidostas', methods=["GET","POST"])
 def lidostas():
     return render_template('Lidostas.html')
 
-@app.route('/lidmasinas')
+@app.route('/lidmasinas', methods=["GET","POST"])
 def lidmasinas():
     return render_template('Lidmasinas.html')
 
-@app.route('/reisi')
+@app.route('/reisi', methods=["GET","POST"])
 def reisi():
     return render_template('Reisi.html')
 
-@app.route('/admin')
+@app.route('/admin', methods=["GET","POST"])
 def admin():
     return render_template('admin.html')
+
+@app.route('/logout', methods=["GET","POST"])
+def logout():
+    session.pop("auth", None)
+    return redirect(url_for("home"))
+
+@app.route('/registration', methods=["GET","POST"])
+def registration():
+    if "auth" in session:
+        return redirect(url_for("home"))
+    else:
+        if request.method == 'POST':
+
+            id_ = randint(100,9999999)
+            email = request.form['email']
+            password = request.form['password']
+
+            a = users_db.find_one({"email":email})
+            if a != None:
+                a = a['email']
+
+            if a == email:
+                return redirect(url_for("home"))
+
+            session["auth"] = email
+
+            users_db.insert_one({"id":id_,"email":email,"password":password})
+            return redirect(url_for("home"))
+        else:
+            return render_template("registration.html")
 
 @app.route("/login", methods=["GET","POST"])
 def login():

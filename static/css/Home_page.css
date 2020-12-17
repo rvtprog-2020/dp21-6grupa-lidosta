@@ -119,7 +119,7 @@ body {
   }
   .AdminNavi{
     position: absolute;
-    margin-left: 900px;
+    margin-left: 840px;
   }
   .Homepage{
     Position: absolute;
@@ -127,4 +127,17 @@ body {
     margin-top: 4px;
     font-size: 40px;
     color: rgba(46, 0, 250, 0.3)
+}
+.Logout{
+  position: absolute;
+  margin-left: 1140px;
+  cursor: pointer;
+	height: 30px;
+	color: #fff;
+	background: #5200a5;
+	border: none;
+	text-transform: uppercase;
+	font-size: 15px;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
+
 }

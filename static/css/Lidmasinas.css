@@ -144,3 +144,16 @@ body {
     margin-left: 710px;
     margin-top: 290px;
   }
+  .Logout{
+    position: absolute;
+    margin-left: 950px;
+    cursor: pointer;
+    height: 30px;
+    color: #fff;
+    background: #5200a5;
+    border: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
+  
+  }
