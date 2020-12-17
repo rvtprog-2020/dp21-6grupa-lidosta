@@ -2,12 +2,25 @@ from flask import Flask, render_template, request
 from pymongo import MongoClient
 from bson.json_util import dumps
 
-client = MongoClient("mongodb+srv://admin:<admin>@cluster0.gi8gq.mongodb.net/<lidostaBRUV>?retryWrites=true&w=majority")
+client = MongoClient("mongodb+srv://admin:admin@cluster0.gi8gq.mongodb.net/myproject?retryWrites=true&w=majority")
 
 app = Flask(__name__)
 
+# Datubazes
+db = client.myproject
+
+
+# Tabulas/Dokumenti
+users_db = db.users
+preces_db = db.preces
+
 #  Datubaze bruv
-db=client.lidostaBRUV
+user1 = {"id":"1", "vards":"Gusts","uzvards":"Stanga"}
+user2 = {"id":"2", "vards":"Maikls","uzvards":"Beginskis"}
+
+users_db.insert_one(user1)
+users_db.insert_one(user2)
+exit()
 
 
 
